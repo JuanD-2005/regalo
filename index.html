@@ -64,6 +64,49 @@
             margin-bottom: 15px;
         }
         
+        /* Estilo Polaroid */
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            transform: rotate(2deg);
+            margin: 30px auto;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+        
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            display: block;
+        }
+        
+        .polaroid::after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .polaroid-caption {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #713f12;
+        }
+        
         .counter {
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 18px;
@@ -165,14 +208,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Para mi Princesa Hermosa<span class="heart">❤</span></h1>
+            <h1>Feliz Día de las Flores Amarillas <span class="heart">❤</span></h1>
         </div>
         
         <div class="message">
-            <p>Mi Amor, Camila</p>
+            <p>Mi Amor,</p>
             <p>Espero que mis detallitos te recuerden lo mucho que yo te amo.</p>
-            <p>Este es solo uno más de los que te mereces</p>
             <p>Aunque hoy no pueda estar a tu lado, mi corazón está contigo.</p>
+        </div>
+        
+        <!-- Foto Polaroid -->
+        <div class="polaroid">
+            <img src="resources/fotito.jpg" alt="Nuestra foto">
+            <div class="polaroid-caption">Nuestro momento favorito</div>
         </div>
         
         <div class="counter">
